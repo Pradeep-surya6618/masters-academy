@@ -28,11 +28,16 @@ export const metadata = {
   description: "LMS for Masters Academy",
 };
 
+import NavBar from "./components/NavBar/navBar";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={helvetica.variable}>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <NavBar />
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );
